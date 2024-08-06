@@ -12,5 +12,8 @@
 #优先安装 passwall 源
 ./scripts/feeds install -a -f -p passwall_packages
 ./scripts/feeds install -a -f -p passwall_luci
-git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
-git clone https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale
+sed -i '1i src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+sed -i '2i src-git small https://github.com/kenzok8/small' feeds.conf.default
+git pull
+./scripts/feeds update -a
+./scripts/feeds install -a
