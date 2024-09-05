@@ -14,3 +14,7 @@
 ./scripts/feeds install -a -f -p passwall
 ./scripts/feeds install -a -f -p passwall2
 echo >> feeds.conf.default
+sed -i "/helloworld/d" "feeds.conf.default"
+echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
+./scripts/feeds update helloworld
+./scripts/feeds install -a -f -p helloworld
