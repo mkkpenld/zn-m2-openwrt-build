@@ -12,5 +12,5 @@
 #优先安装 passwall 源
 ./scripts/feeds install -a -f -p passwall_packages
 ./scripts/feeds install -a -f -p passwall
-./scripts/feeds install -a -f -p passwall2
-./scripts/feeds install -a -f -p openclash
+# ./scripts/feeds install -a -f -p passwall2
+# ./scripts/feeds install -a -f -p openclash
