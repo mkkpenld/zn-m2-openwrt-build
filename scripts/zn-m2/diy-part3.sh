@@ -16,6 +16,9 @@
 # 替换golang版本为1.22
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+rm -rf feeds/packages/lang/rust
+git clone https://github.com/openwrt/packages/tree/cd4ee8cb9d2d448d49c5d1d21709c548f8143cfc/lang/rust -b master feeds/packages/lang/rust
+
 
 # ttyd免登陆
 sed -i -r 's#/bin/login#/bin/login -f root#g' feeds/packages/utils/ttyd/files/ttyd.config
